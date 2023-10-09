@@ -1,5 +1,6 @@
 body {
-    background: rgb(125, 198, 205);
+    background-image: url('https://wallpapers.com/images/featured/dragon-ball-super-31k7m53hb2l6rbge.jpg');
+    background-size: cover;
     color: rgb(45, 45, 45);
     padding: 10px;
     font-family: arial;
@@ -73,10 +74,10 @@ h2, h3 {
         }
 
         #portfolio li {
-            background: #12a53e8a;
+            background: #dd63ae8a;
             padding: 50px;
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
         }
 
         #portfolio li:hover {
