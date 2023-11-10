@@ -28,12 +28,12 @@ $(function () {
      * Comment the lines out to remove the grid
      */
 
-      // for (let i = 100; i < canvas.width; i += 100) {
-      //   createPlatform(i, canvas.height, -1, -canvas.height);
-      // }
-      // for (let i = 100; i < canvas.height; i += 100) {
-      //   createPlatform(canvas.width, i, -canvas.width, -1);
-      // }
+    for (let i = 100; i < canvas.width; i += 100) {
+      createPlatform(i, canvas.height, -1, -canvas.height);
+    }
+    for (let i = 100; i < canvas.height; i += 100) {
+      createPlatform(canvas.width, i, -canvas.width, -1);
+    }
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE BELOW THIS POINT///////////
@@ -47,24 +47,26 @@ $(function () {
     createPlatform(200, 500, 100, 5);
     createPlatform(200, 300, 100, 5);
     createPlatform(200, 100, 100, 5);
-    
+
     createPlatform(400, 600, 100, 5);
     createPlatform(400, 400, 100, 5);
     createPlatform(400, 200, 100, 5);
 
-    
+
     createPlatform(200, 0, 0.01, 500);
-    
+
     createPlatform(600, 700, 100, 5)
     createPlatform(1000, 600, 200, 0.01)
 
-    
+
     // TODO 2
     // Create collectables
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
-    createCollectable("database", 240, 150, 0.05, 100);
+    createCollectable("database", 240, 150, 0.05, 1);
+    createCollectable("database", 440, 150, 0.05, 1);
+    createCollectable("database", 640, 150, 0.05, 1);
 
 
 
@@ -74,13 +76,15 @@ $(function () {
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
     createCannon("left", 50, 1000);
+    createCannon("left", 250, 1000);
+    createCannon("left", 450, 1000);
 
 
 
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
-    
+
   }
 
   registerSetup(setup);
