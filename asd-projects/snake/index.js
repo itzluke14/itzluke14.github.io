@@ -329,6 +329,10 @@ function calculateHighScore() {
     highScore = score;
     alert("New High Score!");
   }
+  if (score <= highScore && highScore > 0) {
+    alert("No New High Score!");
+  }
+
 
   return highScore;
 }
