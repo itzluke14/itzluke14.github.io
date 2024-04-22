@@ -27,9 +27,9 @@ function applyAndRender() {
   // applyFilter(decreaseBlue)
   // applyFilter(increaseGreenByBlue)
 
-  applyFilterNoBackground(reddify)
-  applyFilterNoBackground(decreaseBlue)
-  applyFilterNoBackground(increaseGreenByBlue)
+  applyFilterNoBackground(change1)
+  applyFilterNoBackground(change2)
+  applyFilterNoBackground(change3)
 
   // do not change the below line of code
   render($("#display"), image);
@@ -85,22 +85,23 @@ function keepInBounds(boundNumber) {
 }
 
 // TODO 3: Create reddify function
-function reddify(rgbArray) {
-  rgbArray[RED] = 200
+function change1(rgbArray) {
+  rgbArray[GREEN] = keepInBounds(rgbArray[GREEN] + 100)
 }
 
 // TODO 6: Create more filter functions
-function decreaseBlue(rgbArray) {
-  rgbArray[BLUE] = keepInBounds(rgbArray[BLUE] - 50)
+function change2(rgbArray) {
+  rgbArray[BLUE] = keepInBounds(rgbArray[GREEN] / 2)
 }
 
-function increaseGreenByBlue(rgbArray) {
-  rgbArray[GREEN] = keepInBounds(rgbArray[BLUE] + rgbArray[GREEN])
+function change3(rgbArray) {
+  rgbArray[RED] = keepInBounds(rgbArray[BLUE] + keepInBounds(rgbArray[RED] / 2))
 }
 
 // CHALLENGE code goes below here
 
-
-
-
+//Change the names of the 3 FNs to general names
+//Like change1, change2, change3
+//Most colors should be called by keepInBounds(rgbArray[COLOR])
+//Except for setting a color, like rgbArray[RED] = 5
 
